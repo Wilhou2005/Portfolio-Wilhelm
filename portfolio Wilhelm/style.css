@@ -1,0 +1,256 @@
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #141414;
+  color: #e5e5e5;
+  
+}
+
+header {
+  position: relative;
+}
+.banniere {
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.texte-nom h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.texte-nom p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7f1d1d;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.logo:hover {
+  color: #f87171;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.menu li a:hover {
+  color: #f87171;
+}
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#menu-toggle {
+  display: none;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.presentation {
+  background: #1e1e1e;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.presentation h2 {
+  color: #f87171;
+  text-transform: uppercase;
+}
+
+.bloc-principal {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+}
+.partie-gauche, .partie-droite {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+}
+.partie-gauche {
+  border-right: 1px solid #2b2b2b;
+}
+.zone-experience, .zone-formation, .zone-competences {
+  background: #1e1e1e;
+  padding: 15px 20px;
+  margin-bottom: 1rem;
+}
+h2, h3 {
+  color: #f87171;
+  margin-top: 0;
+}
+
+.zone-mail {
+  text-align: center;
+  margin-top: 2rem;
+}
+.btn-mail {
+  background: #f87171;
+  color: #141414;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+.btn-mail:hover {
+  background: #fca5a5;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1.2rem 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #7f1d1d;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .bloc-principal {
+    flex-direction: column;
+  }
+  .partie-gauche {
+    border-right: none;
+    
+  }
+}
+/* === Section Contact === */
+.zone-contact {
+  text-align: center;
+  margin-top: 3rem;
+  background: #1e1e1e;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  animation: fadeIn 1s forwards;
+}
+
+.zone-contact h2 {
+  color: #f87171;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.contact-blocs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-carte {
+  background: #141414;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  width: 220px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-carte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.contact-carte h3 {
+  color: #f87171;
+  margin-bottom: 0.5rem;
+}
+
+.contact-carte p {
+  margin: 0.5rem 0 1rem;
+}
+
+.contact-carte a {
+  color: #fca5a5;
+  text-decoration: none;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.contact-carte a:hover {
+  text-decoration: underline;
+}
+
+.icon-contact {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-carte:hover .icon-contact {
+  transform: scale(1.1);
+}
+
+@media (max-width: 820px) {
+  .contact-blocs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-carte {
+    width: 80%;
+  }
+}
